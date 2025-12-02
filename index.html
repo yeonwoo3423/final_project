@@ -1,164 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>내 인생 명곡</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Inter", sans-serif;
-            background: #0b0f10;
-            color: #dfeff0;
-            line-height: 1.6;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 인생 명곡 PLAYLIST</title>
 
-        header {
-            padding: 2rem;
-            text-align: center;
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #5af0d6;
-        }
-
-        .hero {
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            background: linear-gradient(180deg, rgba(4, 18, 19, 0.6), rgba(2, 8, 10, 0.85));
-            text-align: center;
-        }
-
-        .hero p {
-            max-width: 600px;
-            margin-top: 1rem;
-            color: #9fb1b0;
-        }
-
-        .track {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 4rem 2rem;
-        }
-
-        .track-card {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: rgba(10, 20, 20, 0.45);
-            backdrop-filter: blur(6px) saturate(120%);
-            border: 1px solid rgba(95, 220, 200, 0.1);
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .track-title {
-            color: #1fb5a9;
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .track-desc {
-            margin: 1rem 0 2rem;
-            color: #cfe5e4;
-        }
-
-        .album-art {
-            width: 100%;
-            max-width: 320px;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-        }
-
-        audio {
-            width: 100%;
-            margin-top: 0.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .track-card {
-                display: grid;
-                grid-template-columns: 1fr 1.5fr;
-                gap: 2rem;
-                align-items: center;
-            }
-        }
-    </style>
+    <!-- style.css 연결 -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>내 인생 명곡</header>
+    <div class="container">
 
-    <section class="hero">
-        <h1>아련한 기억 속에서 다시 태어나는 음악들</h1>
-        <p>어둡지만 푸르고, 흐릿하지만 선명한 감정을 남긴 세 곡을 소개합니다.</p>
-    </section>
+        <!-- 페이지 제목 -->
+        <header class="title">
+            <h1>내 인생 명곡 PLAYLIST</h1>
+        </header>
 
-    <main>
-        <!-- 여름깃 섹션 -->
-        <section class="track" id="track-summer">
-            <div class="track-card">
-                <img class="album-art" src="여름깃.jpg" alt="여름깃 앨범아트" />
+        <div class="song-list">
 
-                <div>
-                    <h2 class="track-title">새소년 - 여름깃</h2>
-                    <p class="track-desc">
-                        20살 여름 빨리 어른이 되고싶었던 여름의 솔직한 마음을 담아낸 곡
-                    </p>  
+            <!-- ⭐ 첫 번째 노래 카드 -->
+            <div class="song-card">
+                <img 
+                    class="cover" 
+                    src="song1.jpg"
+                    alt="album cover"
+                >
+                <div class="info">
+                    <h2>Always Awake</h2>
+                    <p>Jazzyfact</p>
 
-                    <audio controls preload="metadata">
-                        http://youtu.be/CosFZpLpPfc?si=2X2ZrPv4Yg-w6L24
-            
-                      <source src="" type="audio/mpeg" />
-                    </audio>
-                </div>
-            </div>
-        </section>
-
-        <!-- 기억 섹션 -->
-        <section class="track" id="track-memory">
-            <div class="track-card">
-                <img class="album-art" src="
-        " alt="기억 앨범아트" />
-
-                <div>
-                    <h2 class="track-title">실리카겔 - 기억</h2>
-                    <p class="track-desc">
-                    학교 종소리 사운드로 시작해 어느새 잊은 학창시절을 떠올리게 하는 곡    
+                    <!-- ⭐ 여기 설명 입력 -->
+                    <p class="desc">
+                        더 열심히 살아야겠다는 활력을 주는 노래이다.
                     </p>
 
-                    <audio controls preload="metadata">
-                        http://youtu.be/hqkRrtkGF5g?si=oVcN1XHvoPzFimF4
-                        <source src="기억.jpg" type="audio/mpeg" />
-                    </audio>
+                    <a 
+                        class="btn"
+                        href="https://www.youtube.com/watch?v=Kl2BfhJi-yA"
+                        target="_blank"
+                    >유튜브에서 듣기</a>
                 </div>
             </div>
-        </section>
 
-        <!-- New Born 섹션 -->
-        <section class="track" id="track-newborn">
-            <div class="track-card">
-                <img class="album-art" src="혁오 사랑으로.jpg" alt="New Born 앨범아트" />
+            <!-- ⭐ 두 번째 노래 카드 -->
+            <div class="song-card">
+                <img 
+                    class="cover" 
+                    src="song2.jpg"
+                    alt="album cover"
+                >
+                <div class="info">
+                    <h2>Sunflower</h2>
+                    <p>Post Malone</p>
 
-                <div>
-                    <h2 class="track-title">혁오 - New Born</h2>
-                    <p class="track-desc">
-                        회상에서 빠져나와 다시 태어나는 순간을 담아낸곡
+                    <!-- ⭐ 여기 설명 입력 -->
+                    <p class="desc">
+                        밝고 긍정적인 기운을 주는 노래이다.
                     </p>
 
-                    <audio controls preload="metadata">
-                        http://youtu.be/0LAL1B80hbE?si=Af65TpXlHhJRKHRR
-                        <source src="" type="audio/mpeg" />
-                    </audio>
+                    <a 
+                        class="btn"
+                        href="https://www.youtube.com/watch?v=ApXoWvfEYVU"
+                        target="_blank"
+                    >유튜브에서 듣기</a>
                 </div>
             </div>
-        </section>
-    </main>
 
+            <!-- ⭐ 세 번째 노래 카드 -->
+            <div class="song-card">
+                <img 
+                    class="cover" 
+                    src="song3mod.jpg"
+                    alt="album cover"
+                >
+                <div class="info">
+                    <h2>재</h2>
+                    <p>한로로</p>
+
+                    <!-- ⭐ 여기 설명 입력 -->
+                    <p class="desc">
+                        음악의 악기가 하나씩 추가되는 부분에서 희열을 느낄 수 있으며 노래 가사의 의미가 좋은 곡이다.
+                    </p>
+
+                    <a 
+                        class="btn"
+                        href="https://youtu.be/C77DJ8nySoo?si=7azo-_y3fTSFSoor"
+                        target="_blank"
+                    >유튜브에서 듣기</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
